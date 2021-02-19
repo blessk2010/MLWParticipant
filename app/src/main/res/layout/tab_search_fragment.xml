@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- DatePicker Options -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:id="@+id/search_view_linear_layout"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+    android:weightSum="1" >
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/search_view_layout"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_weight="0.2"
+        >
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/search_textview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            android:gravity="center"
+            android:hint="@string/pid_search_hint"
+            android:inputType="textFilter"
+            android:maxLines="1"
+            android:layout_toLeftOf="@+id/search_btn"
+            />
+    </android.support.design.widget.TextInputLayout>
+        <Button
+            android:id="@+id/search_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/search_btn_txt"
+            android:textAllCaps="false"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/search_view_layout"
+            android:layout_weight="0.8"
+            android:layout_marginTop="10dp"
+            />
+    </LinearLayout>
+    <!--View
+        android:id="@+id/line_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/search_view_layout"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray"
+        android:gravity="center_horizontal" /-->
+    <TextView
+        android:id="@+id/searchTextResultView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/search_view_linear_layout"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/sort_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchTextResultView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"
+        android:text="@string/sort_label"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchTextResultView"
+        android:layout_toRightOf="@+id/sort_label"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="1"
+        >
+
+        <RadioButton
+            android:id="@+id/sort_by_pid"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="4.86"
+            android:checked="true"
+            android:text="@string/sort_by_pid_label"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/sort_by_date"
+            android:layout_width="113dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="@string/sort_by_date_label"
+            android:textSize="18sp" />
+
+    </RadioGroup>
+    <TableLayout
+        android:id="@+id/table_header"
+        android:layout_below="@+id/radioGroup"
+        android:layout_centerHorizontal="true"
+        android:layout_width="fill_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_height="wrap_content"/>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/table_header"
+        android:paddingBottom="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:id="@+id/fillable_area">
+            <TableLayout
+                android:id="@+id/fixed_column"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content"/>
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TableLayout
+                    android:id="@+id/scrollable_part"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="fill_parent"/>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

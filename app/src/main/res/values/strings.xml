@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <bool name="abc_config_actionMenuItemAllCaps" translatable="false">false</bool>
+        <string name="app_name" translatable="false">MLW Participant visit</string>
+        <string name="action_db_update" translatable="false">Update database</string>
+        <string name="action_about" translatable="false">About</string>
+        <string name="action_help" translatable="false">Help</string>
+        <string name="copy_right" translatable="false">Copyright&#169;2019 Data Department</string>
+        <string name="title_activity_help" translatable="false">Help</string>
+        <string name="usd" translatable="false">$</string>
+
+        <string name="location_hint" translatable="false">Select location</string>
+        <string name="pid_search_hint" translatable="false">Search PID</string>
+        <string name="search_hint" translatable="false">Search here</string>
+        <string name="search_btn_txt" translatable="false">Search</string>
+        <string name="location_label" translatable="false">Location : </string>
+        <string name="project_label" translatable="false">Project : </string>
+        <string name="project_value" translatable="false"></string>
+        <string name="search_label" translatable="false">Search term</string>
+        <string name="sort_label" translatable="false">Sort by :</string>
+        <string name="sort_by_pid_label" translatable="false">PID</string>
+        <string name="sort_by_date_label" translatable="false">Date</string>
+        <string name="action_settings" translatable="false">Settings</string>
+        <string name="saveSettingsBtn_txt" translatable="false">Save Settings</string>
+        <string name="server_hint" translatable="false">Server address http://x.x.x.x</string>
+        <string name="auth_code_hint" translatable="false">Authentication code</string>
+        <string name="saveSettings_label" translatable="false">Project code</string>
+        <string name="selected_date" translatable="false">Select date</string>
+        <string name="pick_date" translatable="false">Choose date</string>
+        <string name="original_button" translatable="false">Framework Picker</string>
+        <string name="last_updated" translatable="false">last updated : </string>
+        <string name="progress_label" translatable="false">Please wait...</string>
+    </resources>
